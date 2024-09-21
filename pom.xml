@@ -12,6 +12,14 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <core.version>1.0-SNAPSHOT</core.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.domingus</groupId>
+            <artifactId>core</artifactId>
+            <version>${core.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
