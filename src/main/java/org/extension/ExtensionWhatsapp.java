@@ -1,8 +1,8 @@
 package org.extension;
 
-import org.domingus.interfaces.Notificable;
+import org.domingus.interfaces.NotificationPlatform;
 
-public class ExtensionWhatsapp implements Notificable { //TODO agregar esta clase al repositorio de extension
+public class ExtensionWhatsapp implements NotificationPlatform { //TODO agregar esta clase al repositorio de extension
 
     @Override
     public void sendMessage(String message) {

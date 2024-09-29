@@ -1,12 +1,12 @@
 package org.extension;
 
-import org.domingus.interfaces.Notificable;
+import org.domingus.interfaces.NotificationPlatform;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ExtensionTelegram implements Notificable {
+public class ExtensionTelegram implements NotificationPlatform {
 
     private static final String TELEGRAM_BOT_TOKEN = "7785419552:AAElsFSdQPqIGNU_jIBeE0QUQvhRQzT67UI";
     private static final String TELEGRAM_CHAT_ID = "-1002389775922";  // Reemplaza con tu chat_id
