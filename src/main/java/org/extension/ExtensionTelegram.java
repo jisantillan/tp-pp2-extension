@@ -29,7 +29,7 @@ public class ExtensionTelegram implements NotificationPlatform {
 
             int responseCode = connection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                System.out.println("Mensaje enviado correctamente a Telegram");
+                System.out.println("Mensaje enviado correctamente a Telegram\n");
             } else {
                 System.out.println("Error al enviar el mensaje a Telegram: " + responseCode);
             }
