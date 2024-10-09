@@ -1,17 +1,17 @@
 package org.extension;
 
-import org.domingus.interfaces.NotificationPlatform;
+import org.domingus.interfaces.Notifier;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ExtensionTelegram implements NotificationPlatform {
+public class ExtensionTelegram implements Notifier {
 
     private static final String TELEGRAM_BOT_TOKEN = "7785419552:AAElsFSdQPqIGNU_jIBeE0QUQvhRQzT67UI";
     private static final String TELEGRAM_CHAT_ID = "-1002389775922";  // Reemplaza con tu chat_id
 
-    public void sendMessage(String message)  {
+    public void notify(String message)  {
         try {
             String apiUrl = "https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage";
             String urlParameters = "chat_id=" + TELEGRAM_CHAT_ID + "&text=" + java.net.URLEncoder.encode(message, "UTF-8");
