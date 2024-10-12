@@ -38,4 +38,9 @@ public class ExtensionTelegram implements Notifier {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public String getName() {
+        return "telegram";
+    }
 }
