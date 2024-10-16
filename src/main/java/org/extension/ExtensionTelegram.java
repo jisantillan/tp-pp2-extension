@@ -41,6 +41,6 @@ public class ExtensionTelegram implements Notifier {
 
     @Override
     public String getName() {
-        return "telegram";
+        return "Telegram";
     }
 }
