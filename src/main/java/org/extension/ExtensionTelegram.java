@@ -1,20 +1,20 @@
 package org.extension;
 
-import org.domingus.interfaces.Notifier;
+import org.domingus.interfaces.Observer;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ExtensionTelegram implements Notifier {
+public class ExtensionTelegram implements Observer {
 
     private static final String TELEGRAM_BOT_TOKEN = "7785419552:AAElsFSdQPqIGNU_jIBeE0QUQvhRQzT67UI";
     private static final String TELEGRAM_CHAT_ID = "-1002389775922";  // Reemplaza con tu chat_id
 
-    public void notify(String message)  {
+    public void update(Object message)  {
         try {
             String apiUrl = "https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage";
-            String urlParameters = "chat_id=" + TELEGRAM_CHAT_ID + "&text=" + java.net.URLEncoder.encode(message, "UTF-8");
+            String urlParameters = "chat_id=" + TELEGRAM_CHAT_ID + "&text=" + java.net.URLEncoder.encode((String) message, "UTF-8");
 
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
