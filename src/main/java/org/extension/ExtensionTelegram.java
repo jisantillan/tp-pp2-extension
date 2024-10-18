@@ -1,11 +1,13 @@
 package org.extension;
 
+import org.domingus.interfaces.Notifier;
 import org.domingus.interfaces.Observer;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+@Notifier
 public class ExtensionTelegram implements Observer {
 
     private static final String TELEGRAM_BOT_TOKEN = "7785419552:AAElsFSdQPqIGNU_jIBeE0QUQvhRQzT67UI";
